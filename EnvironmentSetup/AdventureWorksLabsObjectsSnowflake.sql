@@ -141,9 +141,10 @@ return result;
 $$;
 
 /****** Data Load:  Table vPowerBIEmployee ******/
-PUT file://.\vPowerBISales.csv @~/sales_stage;
+/****** Remove these lines if running from Snowflake Console and upload manually ******/
+PUT file://.\vPowerBISales.csv @~/sales_stage; 
 COPY INTO vPowerBISales from @~/sales_stage file_format = (format_name = 'ADVENTUREWORKS_CSV');
 
 /****** Data Load:  Table vPowerBISales ******/
-PUT file://.\vPowerBIEmployee.csv @~/employee_stage;
+PUT file://.\vPowerBIEmployee.csv @~/employee_stage; 
 COPY INTO vPowerBIEmployee from @~/employee_stage file_format = (format_name = 'ADVENTUREWORKS_CSV');

@@ -22,4 +22,12 @@ If you're not able to create databases in your Snowflake account, you could crea
 
 ### Problems with Snowflake script login
 
-If you're encountering errors logging in to Snowflake using the script you could also run the `AdventureWorksLabsObjectsSnowflake.sql` manually on Snowflake Console. Just make sure that the `PUT` operations are pointing to the correct local path.
+If you're encountering errors logging in to Snowflake using the script you could also run the `AdventureWorksLabsObjectsSnowflake.sql` manually on Snowflake Console. Just make sure that to remove the `PUT` operations from the script and upload the data manually after creating the database and tables, by following these steps:
+
+1. Go to `Databases > AdventureWorks > Tables`.
+2. Choose the table you want to upload.
+3. Click on Load Tables.
+4. Select the Warehouse.
+5. Look for the file for each table. The files are named the same as the tables so upload accordingly.
+6. Choose the `ADVENTUREWORKS_CSV` format.
+7. Click `Load` and wait for the data to upload.
