@@ -18,14 +18,20 @@ The `AdventureWorksScriptSetup.ps1` contains all the code needed to configure th
 
 To successfully configure the SQL Server and Snowflake configurations, simply follow these steps:
 
-1. Download `AdventureWorks2019.bak` from [this page](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms).
-2. Restore the database, following the steps listed on the `Restore to SQL Server`.
-3. Identify your Snowflake account locator. This should be located in the URL you use to login: 
+1. Download this repository.
+2. Restore the database, by opening SQL Server Management and then open the `SQLServerScript.sql`.
+3. Go to `Query > SQLCMD Mode`
+
+![](sqlcmd_mode.png)
+
+4. Modify line 13 to point it to the full path to the `adventureworks_files` folder.
+5. Execute the script.
+6. Identify your Snowflake account locator. This should be located in the URL you use to login: 
 
 ![](snowflake_account.png)
 
-4. Execute the script `AdventureWorksSetupSript.ps1` from PowerShell running as Administrator.
-5. Follow the instructions on the script and supply every detail requested during the installation. The script will request for the following:
+7. Execute the script `AdventureWorksSetupSript.ps1` from PowerShell running as Administrator. This script will install specific objects required on SQL Server and Snowflake.
+8. Follow the instructions on the script and supply every detail requested during the installation. The script will request for the following:
 	- SQL Server Host
 	- SQL Server user and password
 	- Snowflake Account
