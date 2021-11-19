@@ -17,7 +17,7 @@ function Setup-AdventureWorks-SQL {
 
 	##--  Views and Procedure Creation  --##
 	Write-Output "Creating SQL Server custom views and procedures for labs..."
-	#Invoke-Sqlcmd -ServerInstance $server -Database $database -InputFile "AventureWorksLabsObjectsSQLServer.sql" -Credential $sql_credential -ErrorAction Stop
+	Invoke-Sqlcmd -ServerInstance $server -Database $database -InputFile "AventureWorksLabsObjectsSQLServer.sql" -Credential $sql_credential -ErrorAction Stop
 	Write-Output "Successfully created SQL Server views and procedures."
 }
 
@@ -25,7 +25,7 @@ function Setup-AdventureWorks-SQL {
 function Setup-AdventureWorks-Snowflake {
 	Write-Output "---------------"
 	Write-Output "Snowflake connection credentials:"
-	$account = Read-Host -Prompt "Specify Snowflake account. If not sure, refer to this page for more information https://docs.snowflake.com/en/user-guide/admin-account-identifier.html"
+	$account = Read-Host -Prompt "Specify Snowflake account. See Step 6 in the readme or refer to this page for more information https://docs.snowflake.com/en/user-guide/admin-account-identifier.html"
 	$user = Read-Host -Prompt "User"
 	$role = Read-Host -Prompt "Role"
 	
@@ -88,7 +88,7 @@ $welcome_message = "------------------------------------------------------------
 Welcome to Mobilize.NET SnowConvert Training Labs AdventureWorks Setup
 
 Before continuing, make sure you satisfy the following requirements:
-  - Downloaded the AdventureWorks2019.bak file and restored it to your SQL Server instance. In case you don't have it, you can download it here and follow the restore instructions on that page: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms
+  - Install the AdventureWorks2019 database from the files provided in the repository.
   - Snowsql utility is installed.
   - Access to a Snowflake account with the possibility to create databases and schemas.
 	  * If not able to do so, check the Readme.me file on the repository for more details.
