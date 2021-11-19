@@ -1,6 +1,10 @@
-# Mobilize SnowConvert Training Labs Sample Files
+# SnowConvert Studio Training Labs Sample Files
 
-This repository belongs to Mobilize.NET and its purpose is to provide with sample files and extra material for the SnowConvert training labs. It also provides a script to setup AdventureWorks in both a SQL Server locally and a Snowflake instance, which will be used to test these labs.
+This repository provides sample files and setup scripts for the SnowConvert training labs.
+
+# SSRS and Power BI Sample files
+
+These files are located in `PowerBISamples` and `SSRSSamples` folders respectively and they will be used during the labs. Download them into your local folder before starting the labs. Also, make sure to setup the database using the scripts and instructions provided below.
 
 # Snowflake AdventureWorks Files and Scripts setups
 
